@@ -1,6 +1,6 @@
 # Day 1
 
-- Setup Elixir
+- [Setup Elixir](/Setup/Setup.md)
   - Install Elixir on local workstation (could be personal laptop or similar device)
   - Install Elixir in Docker
 - Learn Elixir Interactive Shell (iex)
