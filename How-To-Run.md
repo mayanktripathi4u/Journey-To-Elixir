@@ -11,6 +11,16 @@ cd Basic/
 elixir 00_starter.exs
 ```
 
+From Terminal: 
+
 ![Run From VS Code Terminal](image.png)
 
+
+From Docker Container:
+
 ![Run From Docker Container](image-1.png)
+
+Similar to `00_starter.exs`, run the other files in this directory.
+
+# Different ways to execute elixir file 
+Learn how to run the file, [Refer](Ways-To-Runs.md).
