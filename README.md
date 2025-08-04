@@ -38,11 +38,18 @@ To have a short description about Elixir.
 # Day to Day Logs
 [Daily Logs](/Study-Logs/)
 
-# References
-[Elixir Programming Introduction by Caleb Curry](https://www.youtube.com/watch?v=-lgtb-YSUWE&t=2022s) --> Highly recommend to watch the recording. Nicely explained.
+# References / Resources
+- [Elixir Programming Introduction by Caleb Curry](https://www.youtube.com/watch?v=-lgtb-YSUWE&t=2022s) --> Highly recommend to watch the recording. Nicely explained.
 
-[Functional Programming with Elixir by freeCodeCamp.org](https://www.youtube.com/watch?v=IiIgm_yaoOA)
+- [Functional Programming with Elixir by freeCodeCamp.org](https://www.youtube.com/watch?v=IiIgm_yaoOA)
 
+- [Elixir Official Site](https://elixir-lang.org/)
+  
+- [Awesome Elixir](https://github.com/h4cc/awesome-elixir)
+  
+- [Elixir Forum](https://elixirforum.com/)
+  
+- [Learn Elixir (free book)](https://elixirschool.com/)
 
 
 <font color="#ff0000">Note</font>

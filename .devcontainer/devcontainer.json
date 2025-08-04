@@ -1,0 +1,12 @@
+{
+  "name": "Elixir Dev",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "elixir",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "jakebecker.elixir-ls"  // optional Elixir VS Code extension
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
