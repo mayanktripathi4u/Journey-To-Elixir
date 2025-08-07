@@ -12,6 +12,7 @@ cd ..  # adjust path if needed
 
 mix new todo_project
 ```
+Read about [mix](/Concepts-And-FAQ/mix-new-project.md).
 
 ![alt text](image-6.png)
 
@@ -109,9 +110,9 @@ end
 Try it in IEx:
 
 ```sh
-list = TodoProject.new_list()
-list = TodoProject.add_task(list, "Buy milk")
-TodoProject.show_tasks(list)
+iex> list = TodoProject.new_list()
+iex> list = TodoProject.add_task(list, "Buy milk")
+iex> TodoProject.show_tasks(list)
 ```
 
 If fails with error as below
@@ -138,7 +139,7 @@ That error means that Elixir cannot find a public function called new_list/0 in 
  2. Recompile the module in IEx
  If you're already in IEx, you can reload the module like this:
 ```sh
-recompile()
+iex> recompile()
 ```
 If that doesn't work, quit (Ctrl+C, then a) and restart:
 ```sh
@@ -147,9 +148,17 @@ iex -S mix
 
 3. Try again in IEx
 ```sh
-list = TodoProject.new_list()
-list = TodoProject.add_task(list, "Learn Elixir")
-TodoProject.show_tasks(list)
+iex> list = TodoProject.new_list()
+iex> list = TodoProject.add_task(list, "Learn Elixir")
+iex> TodoProject.show_tasks(list)
 ```
 
 ![alt text](image-7.png)
+
+```sh
+iex> list = TodoProject.add_task(list, "Learn Elixir - Function")
+
+iex> list = TodoProject.add_task(list, "Go for Shopping")
+
+iex> TodoProject.show_tasks(list)
+```

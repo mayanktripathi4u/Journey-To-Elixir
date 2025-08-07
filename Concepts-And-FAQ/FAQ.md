@@ -258,3 +258,8 @@ In essence, concurrency is about structure and organization, while parallelism i
 **Learning Note**
 
 *As I continue to explore Elixir, I’ll update this document with new patterns, examples, and deeper insights.*
+
+
+# Can I use GenServer and Registry without a full Mix project?
+👉 Yes, you can use them in plain `.exs` scripts.
+But you must manually start the Registry because there is no supervision tree automatically created like in a Mix project.
