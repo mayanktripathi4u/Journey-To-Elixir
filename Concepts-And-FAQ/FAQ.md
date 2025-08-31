@@ -263,3 +263,22 @@ In essence, concurrency is about structure and organization, while parallelism i
 # Can I use GenServer and Registry without a full Mix project?
 👉 Yes, you can use them in plain `.exs` scripts.
 But you must manually start the Registry because there is no supervision tree automatically created like in a Mix project.
+
+# `.exs` vs `.ex`
+
+
+
+# Whst is module in Elixir?
+In Elixir, all of the code statys inside its Module(s). 
+Use `defmodule` to define a module.
+As a general convention the module name and the file name should be the same. Its not mandatory, but community convention.
+
+Refer [code - hello](/Basic/hello.exs)
+
+
+# is it mandatory to have `defmodule` in Elixir.?
+In Elixir, to define named functions that can be called later, you generally need to wrap them within a defmodule block. As explained on Stack Overflow, this is because all compiled code in Elixir exists within modules, which provide a structure for organizing and encapsulating functions. 
+However, you can still execute Elixir code without explicitly defining a module in some situations:
+Anonymous Functions: You can define and use anonymous functions (also known as lambdas) directly without a module. For example, my_function = fn(x) -> x + 1 end.
+Elixir Scripts: When running an .exs script, you can include code outside of a defmodule block, although it is common to still define modules for better organization and reusability, notes the DEV Community. 
+In summary: While not strictly mandatory for every line of code, defining modules with defmodule is the conventional and recommended way to structure and organize your Elixir code, especially for creating reusable functions and building larger applications

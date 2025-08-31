@@ -60,6 +60,35 @@ An Actor is an entity that sends message to other actors. Receives those message
 |Advantages|	Concurrency, isolation, fault-tolerance|
 |Real Use-Cases|	Chat servers, IoT devices, patient data processing, queues, etc.|
 
+# Understand how code inside Elixir get executed
+Here my goal is to undersatnd how all of the the code inside Elixir gets executed.
+
+Now all of the code gets executed in something which is called as an actor.
+So we can imageine actor to be something like the box in below diagram, which is an isolated, now this box or so called actor will receives some kind of messages. These messages could be data, could be instructions of what to do with the data and so on. After receiving these messages, the actor is going to process these messages and it simply goign to give back some kind of a response, working as an isolated computation unit.  
+
+![alt text](image-3.png)
+
+Now these actors run inside something which is called as processes and at a given time we can have millions and millions of processes. This is where the data immutability comes into picture. 
+We can have millions of copies of our data and they can be distributed across various actors not only on our local machine but we can have a global cluster of different servers and can distribute our load horizintally acorss the globe.
+
+These processes are not OS processes, you can imagine them to be like your virtual threads.
+
+![alt text](image-4.png)
+
+Every Actor has its own mailbox, so every message that you pass to an independent process they are collected inside this mainbox. These messages are executed in a sequential order. and order of execution is FIFO (first-in first-out).  
+
+![alt text](image-5.png)
+
+To check PID (Process ID)
+```elixir
+iex
+
+> self 
+# will see the PID of Elixir's iex.
+```
+`self` is a function, in elixir either we can write with parantheses or leave then out.
+
+
 # Example
 ## Starting with an simple example
 ![alt text](image.png)
@@ -76,7 +105,10 @@ In Elixir, the underscore `_` means pattern match anything else.
 ## Using Factorial
 Refer [code](/Basic/05_actor_factorial.exs)
 
-To run this, open terminal.
+To run this, 
+1. Open terminal.
+
+2. Start IEx and load the file:
 
 ```sh
 cd Basic/
@@ -84,7 +116,10 @@ cd Basic/
 iex
 ```
 
+Then in IEx:
+
 ```elixir
+c("05_actor_factorial.exs")
 actorid = spawn(Factorial, :fact, [])
 send(actorid, {self(), 5})
 receive do

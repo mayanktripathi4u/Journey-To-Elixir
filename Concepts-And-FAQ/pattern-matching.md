@@ -1,6 +1,7 @@
 # What is Pattern Matching in Elixir?
 In Elixir, pattern matching is a powerful feature that allows you to compare data structures and bind variables in a very declarative and readable way.
 
+# Match Operator `=`
 Unlike typical assignment in other languages (= meaning "assign"), in Elixir the `=` is a match operator. The expression attempts to match the pattern on the left with the value on the right.
 
 In-short, `=` is not just an assignment operator — it's a **match operator**. It tries to match the pattern on the left with the value on the right
@@ -65,6 +66,21 @@ So:
 # Fails with MatchError (because Elixir tries to match 15 to an unknown value c)
 ```
 This would only succeed if c was already bound to 15, But if c = 12, then: it fails ❌ MatchError, because 15 ≠ 12
+
+# Equality Operator `==`
+In Elixir, `==` is called the equality operator.
+
+It checks if two values are equal (compares their values), returning true or false.
+
+```elixir
+a = 13
+a == 13      # true
+a == 15      # false
+13 == a      # true
+```
+
+- `=` is the match operator (used for pattern matching and variable binding).
+- `==` is the equality operator (used for value comparison).
 
 # Pattern Matching with Tuples
 

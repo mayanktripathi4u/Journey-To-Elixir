@@ -51,6 +51,8 @@ To have a short description about Elixir.
   
 - [Learn Elixir (free book)](https://elixirschool.com/)
 
+- [Elixir Tutorial by Octallium - Playlist](https://www.youtube.com/playlist?list=PLYwEjF73cpLm7ER-veWSaFxbGrKqP-3li)
+
 
 <font color="#ff0000">Note</font>
 

@@ -91,6 +91,17 @@ You can:
 
 - This is best for production-quality code.
 
+# 5. Compile and Run the Script
+We can compile and run the script, for this will use command `elixirc`. This is similart to [using elixir command](#1-using-elixir-command-script-mode).
+
+Notice the difference after running the command, as it will create a new compiled file as `Elixir.<>ModuleName>.beam`. Normally we don't compile and run the Elixir files like this, we should use the [mix tool](/Concepts-And-FAQ/mix-new-project.md). 
+
+Run from Terminal:
+```sh
+elixirc hello.exs
+
+
+```
 
 # Summary
 

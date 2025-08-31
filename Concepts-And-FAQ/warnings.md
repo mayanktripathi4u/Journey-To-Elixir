@@ -1,5 +1,6 @@
-# Warnings
+# Warnings & Debug
 
+# ArithmeticError Warning
 Below is the code I used initially for [Factorial](/Basic/05_actor_factorial.exs)
 
 ```elixir
@@ -28,7 +29,7 @@ defmodule Factorial do
 end
 ```
 
-Will get below warning
+This will give below warning
 ![alt text](image-2.png)
 
 **What does this means:**
@@ -66,3 +67,22 @@ end
 
 To smuuarize, the warning is informational. Above code works for positive integers.
 For robustness, add guards to ensure X > 1 before recursing.
+
+
+# MatchError
+WHen running the code `[a, a] = [4, 6]` gets MatchError.
+> (MatchError) no match of right hand side value: [4, 6]
+
+The error occurs because `[a, a] = [4, 6]` tries to match a list where both elements must be equal (the same value).
+
+- `[a, a]` means: "match a list with two elements, both equal, and bind that value to `a`."
+- `[4, 6]` is a list with two different values.
+
+Since `4 ≠ 6`, Elixir raises a MatchError.
+Both elements must be the same for this pattern to match.
+
+Example that works:
+```elixir
+[a, a] = [5, 5]   # a = 5
+```
+
